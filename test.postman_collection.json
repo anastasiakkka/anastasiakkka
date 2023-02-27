@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "e976bf88-ec84-4fa3-97d0-106d73bc22a0",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24750084"
+	},
+	"item": [
+		{
+			"name": "List Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base}}/users/2",
+					"host": [
+						"{{Base}}"
+					],
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single User Not Found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base}}/users/23",
+					"host": [
+						"{{Base}}"
+					],
+					"path": [
+						"users",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST <RESOURCE>",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "SINGLE <RESOURCE>",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://reqres.in/api",
+			"type": "string"
+		}
+	]
+}
